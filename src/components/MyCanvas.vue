@@ -30,7 +30,7 @@ export default {
     }
   },
   methods: {
-    setLength: function(length){
+    setLength(length){
       return length*20;
     },
     // 横線を引く関数
