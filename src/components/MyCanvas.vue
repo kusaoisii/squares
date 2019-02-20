@@ -64,7 +64,7 @@ export default {
     //描写部分 縦
     drawVeticalLine(distance) {
       var Length = this.setLength(distance);
-      while(!(this.drawspotX.p >= this.Height || this.drawspotX.m <= 0)) {
+      while(!(this.drawspotX.p >= this.Width || this.drawspotX.m <= 0)) {
         this.setVerticalLine(this.drawspotY.p);
         this.setVerticalLine(this.drawspotY.m);
         this.drawspotY.p += Length;
@@ -81,7 +81,8 @@ export default {
     // console.log(this.$el)
     this.cs = this.$refs.myCanvas;
     this.ctx = this.cs.getContext('2d');
-
+    this.ctx.strokeStyle = '#666';
+    this.ctx.lineWidth = 0.1;
     this.draw(this.distance);
   }
 }
