@@ -2,7 +2,7 @@
   <div class="example">
     <MyCanvas :distance="distance"/>
     <p><input type="range" min="1" max="100" v-model.number="distance"></p>
-    <p>{{methodsDistance}}</p>
+    <p>{{distance}}</p>
   </div>
 </template>
 
@@ -16,11 +16,6 @@ export default {
   data() {
     return {
       distance: 50
-    }
-  },
-  computed:{
-    methodsDistance: function(){
-      return this.distance;
     }
   }
 }
